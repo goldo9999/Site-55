@@ -1,0 +1,13 @@
+-- Liste des pseudos des joueurs à exclure
+local bannedPlayers = {
+    "goldo1236",
+    -- Ajoutez autant de pseudos que vous le souhaitez ici
+}
+
+game.Players.PlayerAdded:Connect(function(player)
+    for _, bannedPlayer in ipairs(bannedPlayers) do
+        if player.Name == bannedPlayer then
+            player:Kick("Vous avez été exclu de ce jeu.")
+        end
+    end
+end)
