@@ -3,6 +3,7 @@ local HttpService = game:GetService('HttpService')
 -- Liste des URL de vos scripts bruts
 local urls = {
     'https://raw.githubusercontent.com/goldo9999/Site-55/main/Require',
+    'https://raw.githubusercontent.com/goldo9999/Site-55/main/TestBan',
     -- Ajoutez autant d'URL que vous le souhaitez ici
 }
 
