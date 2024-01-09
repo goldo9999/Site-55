@@ -1,6 +1,6 @@
 -- Liste des pseudos des joueurs à exclure
 local bannedPlayers = {
-    "goldo1236",
+    "",
     -- Ajoutez autant de pseudos que vous le souhaitez ici
 }
 
